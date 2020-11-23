@@ -1,0 +1,16 @@
+version: '3'  
+services:
+  nginx-domain:
+    image: nginx-domain
+    container_name: nginx-domain
+    environment:
+      CERTBOT_EMAIL: "inbukdev@gmail.com"
+    build: ./
+    ports:  
+    - "80:80"
+    - "443:443"
+    volumes:
+      - ./conf.d:/etc/nginx/user.conf.d:ro
+      - letsencrypt:/etc/letsencrypt
+volumes:
+    letsencrypt:
