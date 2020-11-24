@@ -4,7 +4,7 @@ services:
     image: nginx-domain
     container_name: nginx-domain
     environment:
-      CERTBOT_EMAIL: "inbukdev@gmail.com"
+      CERTBOT_EMAIL: "william.alvarezv@gmail.com"
     build: ./
     ports:  
     - "80:80"
